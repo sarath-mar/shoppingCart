@@ -1,0 +1,16 @@
+ <section><div>
+        <form method="post" class="box" action="/login">
+        <h6 class="text-danger">Welcome to Shopping Cart</h6>
+            <h1>Sign In</h1>
+            <input name="email" type="text" placeholder="username"> 
+            <br>
+            <input name="password" type="password" placeholder="password">
+            <br>
+            {{#if error}}
+            <p class="text-danger">Invalid username or password</p>
+            {{/if}}
+            <input type="submit" value="login here">
+            <a href="/signup">Create new account?</a>
+        </form>
+    </div>
+    </section>

@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="addproduct">
+   <a href="/admin/addproducts"><input class="m-3 btn btn-primary" type="submit" value="Add Products">
+      </a> 
+      </div>
+    <table class="table table-white">
+  <thead>
+    <tr>
+      <th scope="col">SI No</th>
+      <th scope="col">Products</th>
+      <th scope="col">Category</th>
+      <th scope="col">Discription</th>
+      <th scope="col">Images</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+        
+        {{#each resolve}}
+    <tr>
+      
+      <th scope="row">{{ @index}}</th>
+      <td class="m-4">{{this.product}}</td>
+      <td>{{this.category}}</td>
+      <td>{{this.discription}}</td>
+      <td><img style="width: 50px;height: 50px;"  src="http://localhost:3000/product-images/{{this._id}}.jpg" alt=""></td>
+      <td><a id="delete" class="btn btn-danger" onclick="return confirm(`Delete the product {{this.product}} ?`)" href="/admin/delete/{{this._id}}">Delete</a></td>
+      <td><a class="btn btn-success " href="/admin/edit?id={{this._id}}"> Edit  </a></td>
+     
+    </tr>
+    {{/each}}
+
+  </tbody>
+  </table>
+
+</div>

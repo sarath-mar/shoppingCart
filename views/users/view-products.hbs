@@ -1,0 +1,39 @@
+
+
+<body>
+ 
+
+
+  <section>
+    <div class="row">
+      {{#each resolve}}
+
+      <div class="col-sm-4 col-md-3" style="height: 300px;">
+        <div class="card  sty">
+          <img class="card-img-top" style="width: 100px; height: 100px " src="http://localhost:3000/product-images/{{this._id}}.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{this.product}}</h5>
+            <p class="card-text"><h6>{{this.category}} </h6></p>
+             <p class="card-text">{{this.discription}} </p>
+            <!--<a href="/add-to-cart/{{this._id}}" class="btn btn-primary">Add to cart</a>
+          -->  
+          <button id="addCart" onclick="addcart('{{this._id}}')" class="btn btn-primary">Add to cart</button>
+          </div> 
+        </div>
+
+       
+      </div>
+ {{/each}}
+ </div>
+
+  </section>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+ 
+</body>
+<script>
+
+ 
+</script>
